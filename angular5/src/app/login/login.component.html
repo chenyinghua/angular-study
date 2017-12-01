@@ -1,0 +1,44 @@
+<div class="wrap">
+  <div nz-row  [nzType]="'flex'" [nzJustify]="'space-around'" [nzAlign]="'middle'">
+    <div nz-col [nzSpan]="5" class="loginWin">
+      <h3><nz-avatar nzIcon="logo" nzSrc="../../assets/img/logo.png"></nz-avatar>后台管理系统登录</h3><hr>
+      <form nz-form [formGroup]="validateForm" class="login-form" (ngSubmit)="_submitForm()">
+        <div nz-form-item>
+          <div nz-form-control [nzValidateStatus]="getFormControl('userName')">
+            <nz-input formControlName="userName" [nzPlaceHolder]="'请输入用户名'" [nzSize]="'large'">
+              <ng-template #prefix>
+                <i class="anticon anticon-user"></i>
+              </ng-template>
+            </nz-input>
+            <div nz-form-explain *ngIf="getFormControl('userName').dirty&&getFormControl('userName').hasError('required')">*用户名不能为空!</div>
+            <div nz-form-explain *ngIf="getFormControl('userName').dirty&&getFormControl('userName').hasError('confirm')">*该用户名不存在!</div>
+          </div>
+        </div>
+        <div nz-form-item>
+          <div nz-form-control [nzValidateStatus]="getFormControl('password')">
+            <nz-input formControlName="password" [nzType]="'password'" [nzPlaceHolder]="'请输入密码'" [nzSize]="'large'">
+              <ng-template #prefix>
+                <i class="anticon anticon-lock"></i>
+              </ng-template>
+            </nz-input>
+            <div nz-form-explain *ngIf="getFormControl('password').dirty&&getFormControl('password').hasError('required')">*密码不能为空!</div>
+            <div nz-form-explain *ngIf="getFormControl('password').dirty&&getFormControl('password').hasError('confirm')">*密码不正确!</div>
+          </div>
+        </div>
+        <div nz-form-item>
+          <div nz-form-control>
+            <label nz-checkbox formControlName="remember">
+              <span>记住我</span>
+            </label>
+            <a class="login-form-forgot" class="login-form-forgot">忘记密码？</a>
+            <button nz-button class="login-form-button" [nzType]="'primary'" [nzSize]="'large'" [disabled]="!validateForm.valid" [routerLink]="['/main']">登录</button>
+            <p>Copyright 2017 cjh. All Rights Reserved.</p>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div nz-row [nzType]="'flex'" [nzJustify]="'space-around'" [nzAlign]="'middle'">
+    <div nz-col [nzSpan]="5" class="remark">系统仅支持Edge、Google Chrome、Mozilla Firefox以及其它主流的浏览器，如您的浏览器无法使用本系统，请更换其它浏览器！</div>
+  </div>
+</div>

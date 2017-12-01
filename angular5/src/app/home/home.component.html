@@ -1,0 +1,63 @@
+<nz-card class="welcome">
+  <ng-template #body>
+    <i class="fa fa-bullhorn"></i>&nbsp;<strong class="text-danger">欢迎您，孩子气~</strong><span class="c-home-login-tip">，这是您第 <span class="text-danger">12708</span>次登录，上次登录时间：<span class="text-danger">2017-5-20 21:05:20</span>，如果不是您本人登录，请及时<a href="javascript:void(0)" (click)="passwordEdit()">修改密码</a>。</span>
+  </ng-template>
+</nz-card>
+<div class="card">
+  <div nz-row [nzGutter]="4">
+    <div nz-col class="gutter-row" [nzSpan]="12">
+      <nz-card>
+        <ng-template #title>
+          <i class="fa fa-bell-o"></i> 待办信息
+        </ng-template>
+        <ng-template #extra>
+          <a>More</a>
+        </ng-template>
+        <ng-template #body>
+          <p>Card content</p>
+        </ng-template>
+      </nz-card>
+    </div>
+    <div nz-col class="gutter-row" [nzSpan]="12">
+      <nz-card>
+        <ng-template #title>
+          <i class="fa fa-envelope-open-o"></i> 待阅信息
+        </ng-template>
+        <ng-template #extra>
+          <a>More</a>
+        </ng-template>
+        <ng-template #body>
+          <p>Card content</p>
+        </ng-template>
+      </nz-card>
+    </div>
+  </div>
+  <div nz-row [nzGutter]="4">
+    <div nz-col class="gutter-row" [nzSpan]="12">
+      <nz-card>
+        <ng-template #title>
+          <i class="fa fa-bullhorn"></i> 系统通知
+        </ng-template>
+        <ng-template #extra>
+          <a>More</a>
+        </ng-template>
+        <ng-template #body>
+          <p>Card content</p>
+        </ng-template>
+      </nz-card>
+    </div>
+    <div nz-col class="gutter-row" [nzSpan]="12">
+      <nz-card>
+        <ng-template #title>
+          <i class="fa fa-cubes"></i> 常用功能
+        </ng-template>
+        <ng-template #extra>
+          <a>More</a>
+        </ng-template>
+        <ng-template #body>
+          <p>Card content</p>
+        </ng-template>
+      </nz-card>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+.ant-layout-header{background: #1190d6;}
+.logo {width: 120px;font-size: 32px;color: #fff;float: left;}
+.container{position: absolute;bottom: 45px;width: 100%;overflow: hidden;background: #f6f7f8;}
+.container{top:64px;border-top:5px solid;}
+.ant-layout-sider{background: #fff;box-shadow: 5px 0 5px #ccc;}
+.trigger{margin:10px;padding:5px;border: 1px #ccc solid;border-radius: 2px;}
+.ant-menu{background: none;border:none;}
+.ant-breadcrumb{height: 50px;line-height: 50px;font-size:16px;background: #fff;}
+.ant-menu-horizontal{float:right;line-height: 50px;}
+.ant-menu-horizontal > .ant-menu-item:hover,.ant-menu-horizontal > .ant-menu-item-selected{border:none;}
+.ant-layout-footer{position: absolute;bottom: 0;width: 100%;height: 45px;line-height: 45px;padding: 0;text-align: center;background: #1190d6;border-top:5px solid #0a7bb9;color: #fff;  }

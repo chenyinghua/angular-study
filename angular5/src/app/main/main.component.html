@@ -1,0 +1,57 @@
+<nz-layout>
+
+  <nz-header>
+    <div class="logo">logo</div>
+  </nz-header>
+
+  <nz-layout class="container">
+
+    <nz-sider nzCollapsible [(nzCollapsed)]="isCollapsed" [nzCollapsedWidth]="0" [nzWidth]="200"  [nzTrigger]="null">
+      <ul nz-menu [nzMode]="'inline'" style="height:100%">
+        <li nz-submenu *ngFor="let item1 of menu">
+          <span title><i class="anticon" [ngClass]="item1.icon"></i>{{item1.name}}</span>
+          <ul>
+            <li nz-menu-item *ngFor="let item2 of item1.children">
+              <span title><i class="anticon" [ngClass]="item2.icon"></i>{{item2.name}}</span>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nz-sider>
+
+    <nz-content>
+      <nz-breadcrumb [nzSeparator]="'>'">
+        <i class="anticon trigger" [class.anticon-menu-fold]="!isCollapsed" [class.anticon-menu-unfold]="isCollapsed" (click)="isCollapsed=!isCollapsed"></i>
+        <ul nz-menu [nzMode]="'horizontal'">
+          <li nz-menu-item>
+            <span title><i class="anticon anticon-home"></i>首页</span>
+          </li>
+          <li nz-menu-item>
+            <nz-dropdown>
+              <a class="ant-dropdown-link" nz-dropdown>
+                孩子气~ <i class="anticon anticon-down"></i>
+              </a>
+              <ul nz-menu>
+                <li nz-menu-item>
+                  <a><i class="anticon anticon-user"></i>&nbsp;个人资料</a>
+                </li>
+                <li nz-menu-item>
+                  <a><i class="anticon anticon-key"></i>&nbsp;修改密码</a>
+                </li>
+                <li nz-menu-item>
+                  <a><i class="anticon anticon-logout"></i>&nbsp;退出系统</a>
+                </li>
+              </ul>
+            </nz-dropdown>
+          </li>
+        </ul>
+        <nz-breadcrumb-item>首页</nz-breadcrumb-item>
+      </nz-breadcrumb>
+      <router-outlet></router-outlet>
+    </nz-content>
+
+  </nz-layout>
+
+  <nz-footer>Footer</nz-footer>
+
+</nz-layout>
